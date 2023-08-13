@@ -36,7 +36,8 @@ Input parameters need to be specified:
 5. “gtf_file” : genome annotation file in .gtf format, we used gencode mouse V27 downloaded from https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_mouse/release_M27/.
 
 Key output files:
-Single-cell gene count matrix, including both the exonic, the intronic and the combined matrix, as well as the cell annotation and gene annotation table are in a .RData object in the following directory under “all_output_folder”: “/report/Sci2_Summary.RData”.
+
+1. Single-cell gene count matrix, including both the exonic, the intronic and the combined matrix, as well as the cell annotation and gene annotation table are in a .RData object in the following directory under “all_output_folder”: “/report/Sci2_Summary.RData”.
 
 
 2. sci-ATAC-seq pipeline
@@ -60,6 +61,9 @@ Input parameters need to be specified:
 5. “gtf_file” : genome annotation file in .gtf format, we used gencode mouse V27 downloaded from https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_mouse/release_M27/.
 
 Key output files:
-Single-cell read files: individual sam files for each single cell are stored in “sam_splitted” under “all_output_folder”.
-Promoter read-count matrix  (±1 kb around TSS): .RData object containing the promoter matrix, cell annotation and promoter annotation in the directory: “/peak_count/summary_count_onlypromoter/sciATAC_summary.RData”.
-A snapfile format containing the cell by bin matrix counting insertion counts across genome-wide(5000-bp bins) for downstream processing in SnapATAC are in the following directory under “all_output_folder”: “snapfile/SAMPLE.snap”.
+
+1. Single-cell read files: individual sam files for each single cell are stored in “sam_splitted” under “all_output_folder”.
+
+2. Promoter read-count matrix  (±1 kb around TSS): .RData object containing the promoter matrix, cell annotation and promoter annotation in the directory: “/peak_count/summary_count_onlypromoter/sciATAC_summary.RData”.
+
+3. A snapfile format containing the cell by bin matrix counting insertion counts across genome-wide(5000-bp bins) for downstream processing in SnapATAC are in the following directory under “all_output_folder”: “snapfile/SAMPLE.snap”.
