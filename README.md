@@ -6,9 +6,12 @@ We convert sequencer-generated .bcl files into .fastq files using Illumina’s b
 
 Example master script: Demultiplex_sciRNA.sh
 Input parameters need to be specified:	
-“run_folder”: the folder containing the raw sequencer-generated data. 
-“sample_sheet”: a .csv file in the sample sheet format as requested for running bcl2fastq. An example is included in the related_files folder.
-“output_folder”: the complete directory where the demultiplexed .fastq files will be stored.
+
+1. “run_folder”: the folder containing the raw sequencer-generated data. 
+
+2. “sample_sheet”: a .csv file in the sample sheet format as requested for running bcl2fastq. An example is included in the related_files folder.
+
+3. “output_folder”: the complete directory where the demultiplexed .fastq files will be stored.
 
 Step2: sci-RNA-pipeline/sci-ATAC pipeline
 
@@ -21,11 +24,16 @@ Example master script: sciRNA_pipeline.sh
 All scripts called in the master script can be found in the “Scripts/sciRNA” folder.
 
 Input parameters need to be specified:
-“fastq_folder”: the directory where the demultiplexed .fastq files is stored, same as “output_folder” from Step1. 
-“sample_ID”: a one-column .txt file specifying which PCR samples to be processed line by line, must be a subset of the “Sample_ID” column from the “sample_sheet” file in Step1. An example is included in the “related_files” folder.
-“all_output_folder”: the complete directory where to output all the intermediate and final files.
-“Index”: genome index folder used for read alignment with STAR.
-“gtf_file” : genome annotation file in .gtf format, we used gencode mouse V27 downloaded from https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_mouse/release_M27/.
+
+1. “fastq_folder”: the directory where the demultiplexed .fastq files is stored, same as “output_folder” from Step1. 
+
+2. “sample_ID”: a one-column .txt file specifying which PCR samples to be processed line by line, must be a subset of the “Sample_ID” column from the “sample_sheet” file in Step1. An example is included in the “related_files” folder.
+
+3. “all_output_folder”: the complete directory where to output all the intermediate and final files.
+
+4. “Index”: genome index folder used for read alignment with STAR.
+
+5. “gtf_file” : genome annotation file in .gtf format, we used gencode mouse V27 downloaded from https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_mouse/release_M27/.
 
 Key output files:
 Single-cell gene count matrix, including both the exonic, the intronic and the combined matrix, as well as the cell annotation and gene annotation table are in a .RData object in the following directory under “all_output_folder”: “/report/Sci2_Summary.RData”.
@@ -40,11 +48,16 @@ Example master script: sciATAC_pipeline.sh
 All scripts called in the master script are included in the “Scripts/sciATAC” folder.
 
 Input parameters need to be specified:
-“fastq_folder”: the directory where the demultiplexed .fastq files is stored, same as “output_folder” from Step1. 
-“sample_ID”: a one-column .txt file specifying which PCR samples to be processed line by line, must be a subset of the “Sample_ID” column from the “sample_sheet” file in Step1.
-“all_output_folder”: the complete directory where to output all the intermediate and final files.
-“Index”: genome index folder used for read alignment with STAR.
-“gtf_file” : genome annotation file in .gtf format, we used gencode mouse V27 downloaded from https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_mouse/release_M27/.
+
+1. “fastq_folder”: the directory where the demultiplexed .fastq files is stored, same as “output_folder” from Step1. 
+
+2. “sample_ID”: a one-column .txt file specifying which PCR samples to be processed line by line, must be a subset of the “Sample_ID” column from the “sample_sheet” file in Step1.
+
+3. “all_output_folder”: the complete directory where to output all the intermediate and final files.
+
+4. “Index”: genome index folder used for read alignment with STAR.
+
+5. “gtf_file” : genome annotation file in .gtf format, we used gencode mouse V27 downloaded from https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_mouse/release_M27/.
 
 Key output files:
 Single-cell read files: individual sam files for each single cell are stored in “sam_splitted” under “all_output_folder”.
