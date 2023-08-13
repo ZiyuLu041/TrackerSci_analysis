@@ -1,6 +1,6 @@
 # TrackerSci_analysis
 
-Step1: Demultiplexing
+## Step1: Demultiplexing
 
 We convert sequencer-generated .bcl files into .fastq files using Illumina’s bcl2fastq tolerating one mismatched base in barcodes. Demultiplexing is performed based on the P5 and P7 barcodes.
 
@@ -13,9 +13,9 @@ Input parameters need to be specified:
 
 3. “output_folder”: the complete directory where the demultiplexed .fastq files will be stored.
 
-Step2: sci-RNA-pipeline/sci-ATAC pipeline
+## Step2: sci-RNA-pipeline/sci-ATAC pipeline
 
-1. sci-RNA-seq pipeline
+### 1. sci-RNA-seq pipeline
 
 From the demultiplexed .fastq files, we followed up with barcode extraction, adaptor trimming, genome alignment, duplicates removal, and we generated the single-cell gene count matrix.
 
@@ -40,7 +40,7 @@ Key output files:
 1. Single-cell gene count matrix, including both the exonic, the intronic and the combined matrix, as well as the cell annotation and gene annotation table are in a .RData object in the following directory under “all_output_folder”: “/report/Sci2_Summary.RData”.
 
 
-2. sci-ATAC-seq pipeline
+### 2. sci-ATAC-seq pipeline
 
 From the demultiplexed .fastq files, we followed up with barcode extraction, adaptor trimming, genome alignment, duplicates removal, and we generated multiple output formats suitable for downstream analysis, including the single-cell read file, the promoter count matrix, and the snapfile file for SnapATAC processing.  
 
